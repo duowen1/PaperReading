@@ -8,14 +8,16 @@
 
 ## Zhang
 
-- [secureTF: A Secure TensorFlow Framework](https://github.com/duowen1/PaperReading/blob/main/secureTF)
-- [Undo Workarounds for Kernel Bugs](https://github.com/duowen1/PaperReading/blob/main/Undo%20Workarounds%20for%20Kernel%20Bugs/Undo%20Workarounds%20for%20Kernel%20Bugs)
+- [secureTF: A Secure TensorFlow Framework](https://github.com/duowen1/PaperReading/tree/main/secureTF)
+- [Undo Workarounds for Kernel Bugs](https://github.com/duowen1/PaperReading/tree/main/Undo%20Workarounds%20for%20Kernel%20Bugs)
 
 # Week 2
 
 ## Xu
 
-- []
+- [Formally Verified Memory Protection for a Commodity Multiprocessor Hypervisor](https://github.com/duowen1/PaperReading/tree/main/SeKVM)
+- [Automatic Policy Generation for Inter-Service Access Control of Microservices](https://github.com/duowen1/PaperReading/tree/main/AUTOARMOR)
+- [TeeRex: Discovery and Exploitation of Memory Corruption Vulnerabilities in SGX Enclaves](https://github.com/duowen1/PaperReading/tree/main/TeeRex)
 
 ## Zhang
 
