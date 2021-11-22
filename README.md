@@ -8,8 +8,8 @@
 
 ## Zhang
 
-- [secureTF: A Secure TensorFlow Framework]()
-- [Undo Workarounds for Kernel Bugs]()
+- [secureTF: A Secure TensorFlow Framework](https://github.com/duowen1/PaperReading/blob/main/secureTF/secureTF.pdf)
+- [Undo Workarounds for Kernel Bugs](https://github.com/duowen1/PaperReading/blob/main/Undo%20Workarounds%20for%20Kernel%20Bugs/Undo%20Workarounds%20for%20Kernel%20Bugs.pdf)
 
 # Week 2
 
