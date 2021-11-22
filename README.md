@@ -8,6 +8,9 @@
 
 ## Zhang
 
+- [secureTF: A Secure TensorFlow Framework]()
+- [Undo Workarounds for Kernel Bugs]()
+
 # Week 2
 
 
