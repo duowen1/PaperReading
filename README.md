@@ -21,4 +21,8 @@
 
 ## Zhang
 
+- (Mostly) Exitless VM Protection from Untrusted Hypervisor through Disaggregated Nested Virtualization
+- Iago attacks: why the system call API is a bad untrusted RPC interface.
+- BesFS: A POSIX Filesystem for Enclaves with a Mechanized Safety Proof
+
 # Waiting List
