@@ -27,7 +27,17 @@
 
 # Waiting List
 
-- Chiron: Privacy-preserving Machine Learning as a Service
-- Ryoan: A Distributed Sandbox for Untrusted Computation on Secret Data【Chiron的background】
-- Firecracker: Lightweight Virtualization for Serverless Applications
-- Emilia: Catching Iago in Legacy Code
+## 容器虚拟机架构类
+
+- [ ] Firecracker: Lightweight Virtualization for Serverless Applications
+
+- [ ] Blending Containers and Virtual Machines: A Study of Firecracker and gVisor【对比了gvisor和firecracker】
+- [ ] gVisor&kata【产品】
+
+## 可信
+
+- [ ] Chiron: Privacy-preserving Machine Learning as a Service
+
+- [ ] Ryoan: A Distributed Sandbox for Untrusted Computation on Secret Data【Chiron的background】
+
+- [ ] Emilia: Catching Iago in Legacy Code
