@@ -34,12 +34,14 @@
 - [ ] gVisor&kata【产品】
 - [ ] Protecting Cloud Virtual Machines from  Hypervisor and Host Operating System Exploits【以前读过，会把之前的笔记和ppt结合起来】
 - [ ] A Secure and Formally Verified Linux KVM Hypervisor【都是形式化验证和虚拟机分层的前置文章】
-- [ ] Sego: Pervasive Trusted Metadata for Efficiently Verified Untrusted System Services
 
 ## 可信
 
 - [ ] Chiron: Privacy-preserving Machine Learning as a Service
-
 - [ ] Ryoan: A Distributed Sandbox for Untrusted Computation on Secret Data【Chiron的background】
 
+## 系统调用篡改攻击
+
+- [ ] Sego: Pervasive Trusted Metadata for Efficiently Verified Untrusted System Services
+- [ ] Towards Application Security on Untrusted Operating Systems
 - [ ] Emilia: Catching Iago in Legacy Code
