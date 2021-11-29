@@ -38,7 +38,10 @@
 ## 可信
 
 - [ ] Chiron: Privacy-preserving Machine Learning as a Service
-
 - [ ] Ryoan: A Distributed Sandbox for Untrusted Computation on Secret Data【Chiron的background】
 
+## 系统调用篡改攻击
+
+- [ ] Sego: Pervasive Trusted Metadata for Efficiently Verified Untrusted System Services
+- [ ] Towards Application Security on Untrusted Operating Systems
 - [ ] Emilia: Catching Iago in Legacy Code
