@@ -92,3 +92,10 @@
 
 # BesFS: A POSIX Filesystem for Enclaves with a Mechanized Safety Proof
 
+- 摘要：
+
+- - 我们提出了BesFS，一个文件系统接口，可证明保护enclave完整性免受完全恶意的操作系统的侵害。
+  - 我们在 4625 行 Coq 证明脚本中证明了 167 个引理和 2 个关键定理，直接证明了 BesFS 规范的安全属性。
+  - BesFS 包含 15 个具有组合安全性的 API，其表达能力足以支持我们测试的 31 个真实应用程序。 BesFS 集成到现有的支持 SGX 的应用程序中，对 TCB 的影响最小。 BesFS 可以作为手工编码 API 检查的参考实现。
+
+- 提出了一种glibc attack：内核在返回mmap调用时，不依照程序要求返回全0的内存，而是修改prev_size这个值；glibc在free时会检查这个值，然后把这段内存之前prev_size大小的内存也一并free
