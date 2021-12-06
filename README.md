@@ -25,6 +25,20 @@
 - [Iago attacks: why the system call API is a bad untrusted RPC interface.](https://github.com/duowen1/PaperReading/blob/main/Iago/iago.pdf)
 - [BesFS: A POSIX Filesystem for Enclaves with a Mechanized Safety Proof](https://github.com/duowen1/PaperReading/blob/main/BesFS/sec20-shinde.pdf)
 
+# Week 3
+
+## Zhang
+
+KUBO: Precise and Scalable Detection of User-triggerable Undefined Behavior Bugs in OS Kernel
+
+Emilia: Catching Iago in Legacy Code.
+
+## Xu
+
+Доверя́й, но проверя́й: SFI safety for native-compiled Wasm
+
+CHANCEL: Efficient Multi-client Isolation Under Adversarial Programs
+
 # Waiting List
 
 ## 容器虚拟机架构类
@@ -45,3 +59,15 @@
 - [ ] Sego: Pervasive Trusted Metadata for Efficiently Verified Untrusted System Services
 - [ ] Towards Application Security on Untrusted Operating Systems
 - [ ] Emilia: Catching Iago in Legacy Code
+
+## 内核
+
+ARBITRAR: User-Guided API Misuse Detection
+
+## 恶意软件
+
+Survivalism: Systematic Analysis of Windows Malware Living-Off-The-Land
+
+## 课后读物
+
+Which Privacy and Security Attributes Most Impact Consumers’ Risk Perception and Willingness to Purchase IoT Devices?
