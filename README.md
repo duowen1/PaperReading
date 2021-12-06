@@ -58,7 +58,6 @@ CHANCEL: Efficient Multi-client Isolation Under Adversarial Programs
 
 - [ ] Sego: Pervasive Trusted Metadata for Efficiently Verified Untrusted System Services
 - [ ] Towards Application Security on Untrusted Operating Systems
-- [ ] Emilia: Catching Iago in Legacy Code
 
 ## 内核
 
