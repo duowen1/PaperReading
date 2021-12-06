@@ -41,7 +41,7 @@ CHANCEL: Efficient Multi-client Isolation Under Adversarial Programs
 
 # Waiting List
 
-## 容器虚拟机架构类
+## 容器/虚拟机架构类
 
 - [ ] Firecracker: Lightweight Virtualization for Serverless Applications
 - [ ] Blending Containers and Virtual Machines: A Study of Firecracker and gVisor【对比了gvisor和firecracker】
@@ -66,6 +66,10 @@ ARBITRAR: User-Guided API Misuse Detection
 ## 恶意软件
 
 Survivalism: Systematic Analysis of Windows Malware Living-Off-The-Land
+
+## 取证
+
+C^2SR: Cybercrime Scene Reconstruction for Post-mortem Forensic Analysis
 
 ## 课后读物
 
