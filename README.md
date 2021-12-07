@@ -45,3 +45,7 @@
 - [ ] Sego: Pervasive Trusted Metadata for Efficiently Verified Untrusted System Services
 - [ ] Towards Application Security on Untrusted Operating Systems
 - [ ] Emilia: Catching Iago in Legacy Code
+
+## 漏洞防御
+
+- [ ] Preventing Use-After-Free Attacks with Fast Forward Allocation【Usenix2021】
