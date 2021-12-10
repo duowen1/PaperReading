@@ -29,9 +29,9 @@
 
 ## Zhang
 
-KUBO: Precise and Scalable Detection of User-triggerable Undefined Behavior Bugs in OS Kernel
+[KUBO: Precise and Scalable Detection of User-triggerable Undefined Behavior Bugs in OS Kernel](https://github.com/duowen1/PaperReading/blob/main/KUBO/ndss2021_1B-5_24461_paper.pdf)
 
-Emilia: Catching Iago in Legacy Code.
+[Emilia: Catching Iago in Legacy Code.](https://github.com/duowen1/PaperReading/blob/main/Emilia/ndss2021_7B-3_24328_paper.pdf)
 
 ## Xu
 
@@ -63,7 +63,6 @@ CHANCEL: Efficient Multi-client Isolation Under Adversarial Programs
 ## 漏洞防御
 
 - [ ] Preventing Use-After-Free Attacks with Fast Forward Allocation【Usenix2021】
-=======
 
 ## 内核
 
