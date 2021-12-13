@@ -25,9 +25,23 @@
 - [Iago attacks: why the system call API is a bad untrusted RPC interface.](https://github.com/duowen1/PaperReading/blob/main/Iago/iago.pdf)
 - [BesFS: A POSIX Filesystem for Enclaves with a Mechanized Safety Proof](https://github.com/duowen1/PaperReading/blob/main/BesFS/sec20-shinde.pdf)
 
+# Week 3
+
+## Zhang
+
+[KUBO: Precise and Scalable Detection of User-triggerable Undefined Behavior Bugs in OS Kernel](https://github.com/duowen1/PaperReading/blob/main/KUBO/ndss2021_1B-5_24461_paper.pdf)
+
+[Emilia: Catching Iago in Legacy Code.](https://github.com/duowen1/PaperReading/blob/main/Emilia/ndss2021_7B-3_24328_paper.pdf)
+
+## Xu
+
+[Доверя́й, но проверя́й: SFI safety for native-compiled Wasm](https://github.com/duowen1/PaperReading/tree/main/Wasm)
+
+[CHANCEL: Efficient Multi-client Isolation Under Adversarial Programs](https://github.com/duowen1/PaperReading/tree/main/CHANCEL)
+
 # Waiting List
 
-## 容器虚拟机架构类
+## 容器/虚拟机架构类
 
 - [ ] Firecracker: Lightweight Virtualization for Serverless Applications
 - [ ] Blending Containers and Virtual Machines: A Study of Firecracker and gVisor【对比了gvisor和firecracker】
@@ -45,3 +59,23 @@
 - [ ] Sego: Pervasive Trusted Metadata for Efficiently Verified Untrusted System Services
 - [ ] Towards Application Security on Untrusted Operating Systems
 - [ ] Emilia: Catching Iago in Legacy Code
+
+## 漏洞防御
+
+- [ ] Preventing Use-After-Free Attacks with Fast Forward Allocation【Usenix2021】
+
+## 内核
+
+ARBITRAR: User-Guided API Misuse Detection
+
+## 恶意软件
+
+Survivalism: Systematic Analysis of Windows Malware Living-Off-The-Land
+
+## 取证
+
+C^2SR: Cybercrime Scene Reconstruction for Post-mortem Forensic Analysis
+
+## 课后读物
+
+Which Privacy and Security Attributes Most Impact Consumers’ Risk Perception and Willingness to Purchase IoT Devices?
