@@ -32,8 +32,8 @@
 - [ ] Firecracker: Lightweight Virtualization for Serverless Applications
 - [ ] Blending Containers and Virtual Machines: A Study of Firecracker and gVisor【对比了gvisor和firecracker】
 - [ ] gVisor&kata【产品】
-- [ ] Protecting Cloud Virtual Machines from  Hypervisor and Host Operating System Exploits【以前读过，会把之前的笔记和ppt结合起来】
-- [ ] A Secure and Formally Verified Linux KVM Hypervisor【都是形式化验证和虚拟机分层的前置文章】
+- [x] Protecting Cloud Virtual Machines from  Hypervisor and Host Operating System Exploits【以前读过，会把之前的笔记和ppt结合起来】
+- [x] A Secure and Formally Verified Linux KVM Hypervisor【都是形式化验证和虚拟机分层的前置文章】
 
 ## 可信
 
