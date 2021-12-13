@@ -59,6 +59,9 @@ CHANCEL提供了动态内存分配、in-enclave文件系统、客户端外部通
 - - Local and Static：检查返回的大小是否小于或等于参数中指定的最大长度即可，语义推导对于每个版本的操作系统都是一次性工作。
   - Stateful：与其纯粹依赖OFL，不如给应用程序打补丁，使其不再有漏洞。我们发现，我们检查的所有6个包含epoll_wait漏洞的应用程序都可以通过用其他轮询系统调用（如poll和select）替换epoll_wait来轻松修复，以达到兼容性的目的。
   - Unauthenticated channel：如同任何假设不安全信道的网络通信一样，未经授权的信道漏洞可以用密码学来解决，以确保可信应用组件内的可信信道。我们也认为这种类型是可以直接解决的。
+  - External：外部元数据，如文件大小，应该被加密保护以防止这些漏洞。
+
+
 
 # KUBO: Precise and Scalable Detection of User-triggerable Undefined Behavior Bugs in OS Kernel
 
