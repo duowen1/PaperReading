@@ -29,15 +29,26 @@
 
 ## Zhang
 
-[KUBO: Precise and Scalable Detection of User-triggerable Undefined Behavior Bugs in OS Kernel](https://github.com/duowen1/PaperReading/blob/main/KUBO/ndss2021_1B-5_24461_paper.pdf)
+- [KUBO: Precise and Scalable Detection of User-triggerable Undefined Behavior Bugs in OS Kernel](https://github.com/duowen1/PaperReading/blob/main/KUBO/ndss2021_1B-5_24461_paper.pdf)
 
-[Emilia: Catching Iago in Legacy Code.](https://github.com/duowen1/PaperReading/blob/main/Emilia/ndss2021_7B-3_24328_paper.pdf)
+- [Emilia: Catching Iago in Legacy Code.](https://github.com/duowen1/PaperReading/blob/main/Emilia/ndss2021_7B-3_24328_paper.pdf)
 
 ## Xu
 
-[Доверя́й, но проверя́й: SFI safety for native-compiled Wasm](https://github.com/duowen1/PaperReading/tree/main/Wasm)
+- [Доверя́й, но проверя́й: SFI safety for native-compiled Wasm](https://github.com/duowen1/PaperReading/tree/main/Wasm)
 
-[CHANCEL: Efficient Multi-client Isolation Under Adversarial Programs](https://github.com/duowen1/PaperReading/tree/main/CHANCEL)
+- [CHANCEL: Efficient Multi-client Isolation Under Adversarial Programs](https://github.com/duowen1/PaperReading/tree/main/CHANCEL)
+
+# Week 4
+
+## Zhang
+- C^2SR: Cybercrime Scene Reconstruction for Post-mortem Forensic Analysis
+- ARBITRAR: User-Guided API Misuse Detection
+
+## Xu
+- DOVE
+- A Formally Verified Configuration for Hardware Security Modules in the Cloud
+- SmashEx: Smashing SGX Enclaves Using Exceptions
 
 # Waiting List
 
@@ -58,7 +69,6 @@
 
 - [ ] Sego: Pervasive Trusted Metadata for Efficiently Verified Untrusted System Services
 - [ ] Towards Application Security on Untrusted Operating Systems
-- [ ] Emilia: Catching Iago in Legacy Code
 
 ## 漏洞防御
 
@@ -67,15 +77,16 @@
 ## 内核
 
 ARBITRAR: User-Guided API Misuse Detection
+Statically Discovering High-Order Taint Style Vulnerabilities in OS Kernels
+Warmonger: Inflicting Denial-of-Service via Serverless Functions in the Cloud
 
 ## 恶意软件
 
 Survivalism: Systematic Analysis of Windows Malware Living-Off-The-Land
 
-## 取证
-
-C^2SR: Cybercrime Scene Reconstruction for Post-mortem Forensic Analysis
-
 ## 课后读物
 
 Which Privacy and Security Attributes Most Impact Consumers’ Risk Perception and Willingness to Purchase IoT Devices?
+
+# 备注
+列表进行到 CCS 2021 的 Session 11A
