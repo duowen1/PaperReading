@@ -35,9 +35,9 @@
 
 ## Xu
 
-Доверя́й, но проверя́й: SFI safety for native-compiled Wasm
+[Доверя́й, но проверя́й: SFI safety for native-compiled Wasm](https://github.com/duowen1/PaperReading/tree/main/Wasm)
 
-CHANCEL: Efficient Multi-client Isolation Under Adversarial Programs
+[CHANCEL: Efficient Multi-client Isolation Under Adversarial Programs](https://github.com/duowen1/PaperReading/tree/main/CHANCEL)
 
 # Waiting List
 
