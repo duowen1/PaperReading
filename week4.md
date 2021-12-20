@@ -1,6 +1,92 @@
 # SmashEx: Smashing SGX Enclaves Using Exceptions
 
+攻击类文章，主要的攻击目标是AEX。作者提出，SGX在处理异常时没有考虑到原子性。
 
+## SGX的Enclaves异步异常处理
+
+![image-20211215200842353](.\images\image-20211215200842353.png)
+
+Intel SGX SDK引入的更加复杂机制，其允许enclave去处理异常（包括通过修改SSA内容改变恢复时的入口点）。和常规的AEX处理相比增加了 re-enters 的过程。
+
+步骤3使用EENTER指令向enclave内传递有关于exception的信息，enclave会直接使用线程栈（在Intel SGX和Microsoft Open Enclave的实现）。Enclave处理了SDK中的异常使用EEXIT退出到进程中，然后再执行RESUME恢复。
+
+
+
+![image-20211216095441762](.\images\image-20211216095441762.png)
+
+
+
+## Re-entrancy 漏洞
+
+![image-20211216100816173](.\images\image-20211216100816173.png)
+
+- A -> B -> C 是正常执行流
+- 如果在ABC期间来了中断，按照虚线走
+- 本来就在恢复上下文的过程中，产生中断，会导致re-entrant
+- 在ocall返回时需要检查并清理寄存器的值（因为寄存器的值是操作系统返回的），在恢复好正常的执行环境前，enclave处于不稳定的状态
+- 为了处理这样的情况：enclave需要静态禁用全部的用户定义的异步处理
+
+
+
+## 高级攻击的步骤
+
+![image-20211216104025341](.\images\image-20211216104025341.png)
+
+
+
+enclave在从ocall通过EENTER返回时，硬件会将攻击者控制的寄存器拷贝到SSA区域中，而enclave的exception handler会使用这些寄存器决定栈的地址和后续将要使用的数据。
+
+正常的执行流：ocall返回，软件恢复寄存器的值，正常执行。来了中断后，硬件会将当前寄存器的值写入到SSA中，在中断处理通过EENTER进入时，会从SSA中读出数据，设置为栈的基址。
+
+![image-20211216111109694](.\images\image-20211216111109694.png)
+
+**前人的工作：**
+
+1. AsyncShock：假设了同步逻辑是有错误的；
+2. Game of Threads：通过操纵线程调度，恶意的OS可以exploit enclave应用中的错误线程同步逻辑；
+3. Guard's Dilemma假设了enclave应用的内存漏洞，利用这些漏洞进行“代码重用攻击”，例如ROP
+
+## 任意写
+
+**步骤**
+
+1. 准备恶意的寄存器的值；
+2. 在合适的时机注入一个异常：
+   1. 页错误
+   2. 计时器中断
+3. Re-entering到Enclave中以处理异常（恶意操作系统已经恢复了页权限）
+4. enclave会从SSA中加载rsp寄存器，然后将SSA中的内容拷贝到栈上作为函数的参数【此时已经实现了任意写+控制流劫持】
+
+## 进一步攻击
+
+1. 将栈指针指向一个攻击者控制的区域；
+2. 进一步地控制流劫持
+
+**步骤**
+
+5. 使得栈指针指向攻击者控制的内存，方便进行ROP攻击；
+6. 在private memory address中寻找gadget
+
+## 防御
+
+### 造成攻击的原因
+
+1. 异常处理时直接使用了普通的程序栈；
+2. 缺少软件和硬件的原子操作保护。
+
+### 独立的异常处理栈
+
+- 现在已有的设计不能处理嵌套异常
+- 囿于SGX固定内存空间的限制
+
+### 禁用异常处理
+
+- 不支持re-entering the enclave
+- 其TCS.NSSA被设置为1
+
+**缺点**
+
+1. 限制了实现的功能
 
 # C^2SR: Cybercrime Scene Reconstruction for Post-mortem Forensic Analysis
 
@@ -64,3 +150,13 @@
   - Trace Generation：跟踪生成的目标是生成所有调用API方法的程序路径，以精确捕获API方法的不同使用场景。
   - Trace Encoding：Trace Encoding的目的是将程序痕迹集转换为固定维度的特征向量，这些特征向量将在以后用于我们的主动学习算法。
   - Active Learning and User Interaction：？？？
+
+# DOVE A Data-Oblivious Virtual Environment
+
+# 问题
+
+对于一些语言，例如R、Python等，在TEE中运行需要非常复杂的程序栈。需要在编程的对便利性和侧信道攻击中做出权衡。
+
+# 本文
+
+为R语言产生了一个 Data-Oblivious Transcipt，在支持R语言程序栈的基础上排除侧信道攻击。
