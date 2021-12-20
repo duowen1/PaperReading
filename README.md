@@ -76,7 +76,6 @@
 
 ## 内核
 
-ARBITRAR: User-Guided API Misuse Detection
 Statically Discovering High-Order Taint Style Vulnerabilities in OS Kernels
 Warmonger: Inflicting Denial-of-Service via Serverless Functions in the Cloud
 
