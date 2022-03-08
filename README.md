@@ -1,43 +1,60 @@
+| 周数 | 张志聪                                                       | 徐少文                                                       |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 1    | secureTF: A Secure TensorFlow Framework                      | CLARION Sound and Clear Provenance Tracking for Microservice Deployments |
+|      | Undo Workarounds for Kernel Bugs                             | LightBox: Full-statck Protected Stateful Middlebox at Lightning Speed |
+| 2    | (Mostly) Exitless VM Protection from Untrusted Hypervisor through Disaggregated Nested Virtualization | Formally Verified Memory Protection for a Commodity Multiprocessor Hypervisor |
+|      | Iago attacks: why the system call API is a bad untrusted RPC interface | Automatic Policy Generation for Inter-Service Access Control of Microservices |
+|      | BesFS: A POSIX Filesystem for Enclaves with a Mechanized Safety Proof | TeeRex: Discovery and Exploitation of Memory Corruption Vulnerabilities in SGX Enclaves |
+| 3    | KUBO: Precise and Scalable Detection of User-triggerable Undefined Behavior Bugs in OS Kernel | Доверя́й, но проверя́й: SFI safety for native-compiled Wasm    |
+|      | Emilia: Catching Iago in Legacy Code                         | CHANCEL: Efficient Multi-client Isolation Under Adversarial Programs |
+| 4    | C^2SR: Cybercrime Scene Reconstruction for Post-mortem Forensic Analysis | DOVE: A Data-Oblivious Virtual Environment                   |
+|      | ARBITRAR: User-Guided API Misuse Detection                   | A Formally Verified Configuration for Hardware Security Modules in the Cloud |
+|      |                                                              | SmashEx: Smashing SGX Enclaves Using Exceptions              |
+| 5    | ExpRace: Exploiting Kernel Races through Raising Interrupts  | DECAF: Automatic, Adaptive De-bloating and Hardening of COTS Firmware |
+|      | Blinder: Partition-Oblivious Hierarchical Scheduling         | Donky: Domain Keys - Efficient In-Process Isolation for RISC-V and x86 |
+|      | Preventing Use-After-Free Attacks with Fast Forward Allocation | SHARD: Fine-Grained Kernel Specialization with Context-Aware Hardening |
+
+
+
 # Week 1
 
 ## Xu
 
-- [CLARION Sound and Clear Provenance Tracking for Microservice Deployments](https://github.com/duowen1/PaperReading/tree/main/CLARION)
+- CLARION Sound and Clear Provenance Tracking for Microservice Deployments
 
-- [LightBox: Full-statck Protected Stateful Middlebox at Lightning Speed](https://github.com/duowen1/PaperReading/tree/main/LightBox)
+- LightBox: Full-statck Protected Stateful Middlebox at Lightning Speed
 
 ## Zhang
 
-- [secureTF: A Secure TensorFlow Framework](https://github.com/duowen1/PaperReading/tree/main/secureTF)
-- [Undo Workarounds for Kernel Bugs](https://github.com/duowen1/PaperReading/tree/main/Undo%20Workarounds%20for%20Kernel%20Bugs)
+- secureTF: A Secure TensorFlow Framework
+- Undo Workarounds for Kernel Bugs
 
 # Week 2
 
 ## Xu
 
-- [Formally Verified Memory Protection for a Commodity Multiprocessor Hypervisor](https://github.com/duowen1/PaperReading/tree/main/SeKVM)
-- [Automatic Policy Generation for Inter-Service Access Control of Microservices](https://github.com/duowen1/PaperReading/tree/main/AUTOARMOR)
-- [TeeRex: Discovery and Exploitation of Memory Corruption Vulnerabilities in SGX Enclaves](https://github.com/duowen1/PaperReading/tree/main/TeeRex)
+- Formally Verified Memory Protection for a Commodity Multiprocessor Hypervisor
+- Automatic Policy Generation for Inter-Service Access Control of Microservices
+- TeeRex: Discovery and Exploitation of Memory Corruption Vulnerabilities in SGX Enclaves
 
 ## Zhang
 
-- [(Mostly) Exitless VM Protection from Untrusted Hypervisor through Disaggregated Nested Virtualization](https://github.com/duowen1/PaperReading/blob/main/(Mostly)%20Exitless%20VM%20Protection%20from%20Untrusted%20Hypervisor%20through%20Disaggregated%20Nested%20Virtualization/sec20-mi.pdf)
-- [Iago attacks: why the system call API is a bad untrusted RPC interface.](https://github.com/duowen1/PaperReading/blob/main/Iago/iago.pdf)
-- [BesFS: A POSIX Filesystem for Enclaves with a Mechanized Safety Proof](https://github.com/duowen1/PaperReading/blob/main/BesFS/sec20-shinde.pdf)
+- (Mostly) Exitless VM Protection from Untrusted Hypervisor through Disaggregated Nested Virtualization
+- Iago attacks: why the system call API is a bad untrusted RPC interface
+- BesFS: A POSIX Filesystem for Enclaves with a Mechanized Safety Proof
 
 # Week 3
 
 ## Zhang
 
-- [KUBO: Precise and Scalable Detection of User-triggerable Undefined Behavior Bugs in OS Kernel](https://github.com/duowen1/PaperReading/blob/main/KUBO/ndss2021_1B-5_24461_paper.pdf)
-
-- [Emilia: Catching Iago in Legacy Code.](https://github.com/duowen1/PaperReading/blob/main/Emilia/ndss2021_7B-3_24328_paper.pdf)
+- KUBO: Precise and Scalable Detection of User-triggerable Undefined Behavior Bugs in OS Kernel
+- Emilia: Catching Iago in Legacy Code
 
 ## Xu
 
-- [Доверя́й, но проверя́й: SFI safety for native-compiled Wasm](https://github.com/duowen1/PaperReading/tree/main/Wasm)
+- Доверя́й, но проверя́й: SFI safety for native-compiled Wasm
 
-- [CHANCEL: Efficient Multi-client Isolation Under Adversarial Programs](https://github.com/duowen1/PaperReading/tree/main/CHANCEL)
+- CHANCEL: Efficient Multi-client Isolation Under Adversarial Programs
 
 # Week 4
 
@@ -46,46 +63,76 @@
 - ARBITRAR: User-Guided API Misuse Detection
 
 ## Xu
-- DOVE
+- DOVE: A Data-Oblivious Virtual Environment
 - A Formally Verified Configuration for Hardware Security Modules in the Cloud
 - SmashEx: Smashing SGX Enclaves Using Exceptions
 
+# Week 5
+
+## Zhang
+
+- ExpRace: Exploiting Kernel Races through Raising Interrupts
+- Blinder: Partition-Oblivious Hierarchical Scheduling
+- Preventing Use-After-Free Attacks with Fast Forward Allocation
+
+## Xu
+
+- DECAF: Automatic, Adaptive De-bloating and Hardening of COTS Firmware
+- Donky: Domain Keys - Efficient In-Process Isolation for RISC-V and x86
+- SHARD: Fine-Grained Kernel Specialization with Context-Aware Hardening
+
+
+
+
 # Waiting List
 
-## 容器/虚拟机架构类
 
-- [ ] Firecracker: Lightweight Virtualization for Serverless Applications
-- [ ] Blending Containers and Virtual Machines: A Study of Firecracker and gVisor【对比了gvisor和firecracker】
-- [ ] gVisor&kata【产品】
-- [x] Protecting Cloud Virtual Machines from  Hypervisor and Host Operating System Exploits【以前读过，会把之前的笔记和ppt结合起来】
-- [x] A Secure and Formally Verified Linux KVM Hypervisor【都是形式化验证和虚拟机分层的前置文章】
+Firecracker: Lightweight Virtualization for Serverless Applications
 
-## 可信
+Blending Containers and Virtual Machines: A Study of Firecracker and gVisor【对比了gvisor和firecracker】
 
-- [ ] Chiron: Privacy-preserving Machine Learning as a Service
-- [ ] Ryoan: A Distributed Sandbox for Untrusted Computation on Secret Data【Chiron的background】
+Chiron: Privacy-preserving Machine Learning as a Service
 
-## 系统调用篡改攻击
+Ryoan: A Distributed Sandbox for Untrusted Computation on Secret Data【Chiron的background】
 
-- [ ] Sego: Pervasive Trusted Metadata for Efficiently Verified Untrusted System Services
-- [ ] Towards Application Security on Untrusted Operating Systems
+Sego: Pervasive Trusted Metadata for Efficiently Verified Untrusted System Services
 
-## 漏洞防御
+Towards Application Security on Untrusted Operating Systems
 
-- [ ] Preventing Use-After-Free Attacks with Fast Forward Allocation【Usenix2021】
-
-## 内核
-
-Statically Discovering High-Order Taint Style Vulnerabilities in OS Kernels
 Warmonger: Inflicting Denial-of-Service via Serverless Functions in the Cloud
-
-## 恶意软件
 
 Survivalism: Systematic Analysis of Windows Malware Living-Off-The-Land
 
-## 课后读物
-
 Which Privacy and Security Attributes Most Impact Consumers’ Risk Perception and Willingness to Purchase IoT Devices?
 
-# 备注
-列表进行到 CCS 2021 的 Session 11A
+
+
+# 技术分享
+
+
+
+| 周数 | 题目            | 分享人 |
+| ---- | --------------- | ------ |
+| 6    | 安全容器架构    | 徐少文 |
+| 7    | kdump使用和原理 | 张志聪 |
+
+
+
+# 技术分享waiting list
+
+- ARM TrustZone
+
+- AMD SEV
+
+- 熔断、幽灵漏洞介绍
+
+- WASM技术
+
+- 内核内存分配机制
+
+- Serverless无服务计算
+
+  
+
+# 进展
+列表进行到 CCS 2021的系统安全
