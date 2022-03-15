@@ -92,7 +92,7 @@
 
 
 
-  
+ 
 
 #### online阶段
 
@@ -180,4 +180,94 @@ potentially reachable和reachable代码，实现了CFI，保证所有控制流�
 # Donky: Domain Keys - Efficient In-Process Isolation for RISC-V and x86
 
 
+
+## 问题
+
+现有的进程内隔离方案：
+
+1. 控制流机制；
+2. 基于权限的设计；
+3. Protection key机制
+
+
+
+### Intel MPK
+
+
+
+#### 机制
+
+- 不需要内核的参与以修改页表的数据。
+- 4-bit也保存在PTE（page-table entry）
+- 对应Keys的权限保存在PKRU寄存器中
+
+**优点：**
+
+- 效率很高；
+
+**缺点**
+
+- 可以访问到MPK的控制寄存器；
+
+**使用中如何克服缺点：**
+
+- 二进制扫描；
+- 不可写的代码页；
+
+
+
+## 解决
+
+
+
+![image-20220315145939521](C:\Users\xsw\AppData\Roaming\Typora\typora-user-images\image-20220315145939521.png)
+
+###  软件
+
+- 每个domain会有自己的protection key的组合
+- 访问控制有Policy寄存器控制
+- domain monitor管理protection key和policy寄存器以及系统调用过滤
+
+
+
+#### Donky Monitor
+
+- Without involvement of the kernel
+- 只有在monitor中可以修改保护策略和策略寄存器
+
+
+
+#### 软件抽象层
+
+- Donky API
+  - 管理domain、protection key和其相关联的内存、和其他domain共享keys
+  - 跨域调用（dcalls）
+
+![image-20220315154051197](C:\Users\xsw\AppData\Roaming\Typora\typora-user-images\image-20220315154051197.png)
+
+- did：domain id
+- Donky API遵循secure-by-default原则
+
+
+
+![image-20220315154651300](C:\Users\xsw\AppData\Roaming\Typora\typora-user-images\image-20220315154651300.png)
+
+
+
+
+
+- 从一个root domain启动，可以建立子domains（第8行）
+- 请求新的protection key（第4行）
+- 将protection keys和其他domain相关联（第9行）
+- 环境切换函数需要注册以及赋予权限（第11-12行）
+- drop 子domain的权限
+
+
+
+#### Domain转换
+
+![image-20220315155402755](C:\Users\xsw\AppData\Roaming\Typora\typora-user-images\image-20220315155402755.png)
+
+- 这个dcall就很像是Intel SGX
+- wrapper在调用和目标domain中都存在，保存参数，清理寄存器
 
