@@ -134,6 +134,10 @@ Which Privacy and Security Attributes Most Impact Consumers’ Risk Perception a
 
 - 程序分析方法
 
+- UEFI
+
+- Secure boot
+
   
 
 # 进展

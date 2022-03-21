@@ -271,3 +271,88 @@ potentially reachable和reachable代码，实现了CFI，保证所有控制流�
 - 这个dcall就很像是Intel SGX
 - wrapper在调用和目标domain中都存在，保存参数，清理寄存器
 
+
+
+# DECAF: Automatic, Adaptive De-bloating and Hardening of COTS Firmware
+
+
+
+## 问题
+
+一个经典的问题，降低固件中的攻击面。
+
+- 代码量大
+- 代码比较滞后
+- 被利用后会危害极大
+
+
+
+### UEFI
+
+- UEFITool
+- 目标即为替代BIOS
+- 启动分为4个阶段
+
+
+#### Security
+
+- SEC阶段是系统的信任根
+- 进行最早的硬件初始化、验证firmware的镜像
+- 将控制区交给PEI
+
+#### PEI
+
+- Pre-EFI Initialization Environment
+- PEI阶段会终止硬件的初始化
+- 枚举平台信息到一系列的Hand Off Blocks (HOBs)，然后传递给DXE阶段
+- 依赖于处理器架构，因为其只初始化用到资源直到内存配置完成
+- 代码尽可能简单
+
+#### DXE
+
+- Driver Execution Environment
+- 被设计为用户空间的UEFI环境
+- 驱动的接口会被安装到初始化了硬件上
+- 其负责以正确的顺序发现、加载和执行驱动
+- 将控制流转移给BDS，OS的boot loader会接管控制流
+
+#### BDS
+
+![[Pasted image 20220317200646.png]]
+
+## Background
+
+#### Firmware的布局
+
+UEFI的固件由一组flash描述符区域组成，这些描述符表标识了镜像的其他区域，比如ME或者网络接口。BIOS区域被拆分为firmware volumes，每个包含一组模块，每个模块包含一个或多个sections。部分模块会包含PE32二进制区域，运行时是会执行。
+
+![[Pasted image 20220317201232.png]]
+
+（大概的层次结构：Region -> Volume -> Module -> Section）
+
+对于可执行的 UEFI 模块，其中一个部分将包含一个 PE32 二进制映像。 这是由固件调度的独立可执行文件。 可执行模块还将包含一个依赖项 (DEPEX) 部分，它将确定执行模块的顺序。 在执行期间，模块将安装指向使用 UEFI 系统函数的函数的指针。 安装的功能称为协议，由全局唯一标识符 (GUID) 标识。 其他模块使用这些 GUID 来查找已安装的协议并调用它们。 这就是独立模块相互链接的方式。 
+
+每个模块有一个 DEPEX section，告诉了DXE dispatcher哪些模块和protocols需要在执行前初始化。如果DEPEX表达式为真，模块加载，否则推迟。
+
+作者认为通过DEPEX section的方式获取协议的依赖关系并不准确，最终选择了使用动态监控的方式实现。
+
+
+
+## 解决
+
+
+
+![image-20220321104737667](C:\Users\xsw\AppData\Roaming\Typora\typora-user-images\image-20220321104737667.png)
+
+
+
+软硬结合的设计：
+
+
+
+- 【A】 Luigi：分布式管理监控
+- 【B】 UEFITool：静态分析、编辑UEFI镜像
+
+
+
+大概的思路是在保证启动顺序的不变的情况下，去修改不同代码的实现。代码运行的结果是在内存中，然后把内存dump出来，分析内存内容。
